@@ -20,7 +20,15 @@ class BigText extends Component {
     }
     
     _update(){
-        bigtext(this.refs.span,{...this.props.options});
+        let delay = 0;
+        if(this.props.delayed === true){
+            delay = 500;
+        }else if(typeof this.props.delayed === 'number'){
+            delay = this.props.delayed;
+        }
+        setTimeout(()=>{
+            bigtext(this.refs.span,{...this.props.options});
+        },delay);
     }
 
     render() {
@@ -43,7 +51,11 @@ class BigText extends Component {
 }
 
 BigText.propTypes = {
-    options: PropTypes.object
+    options: PropTypes.object,
+    delayed: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.bool
+    ])
 };
 
 export default BigText;

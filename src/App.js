@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 import BigText from './react-bigtext';
 
+import ReactHtmlParser from 'react-html-parser';
+
 class App extends Component {
 
   constructor(props){
     super(props);
 
     this.state= {
-      children:"Big Text Component",
+      children:'<i class="fa fa-first-order"></i> Big Text Component <i class="fa fa-first-order"></i>',
       options: `{
   "height" : 100
 }`
@@ -47,8 +49,8 @@ class App extends Component {
             </textarea>
             <br/>
             <br/>
-            <BigText className="textTest" options={options}>
-              {this.state.children}
+            <BigText className="textTest" options={options} delayed>
+              {ReactHtmlParser(this.state.children)}
             </BigText>
           </div>
         </div>
