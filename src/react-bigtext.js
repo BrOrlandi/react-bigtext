@@ -27,7 +27,8 @@ class BigText extends Component {
             delay = this.props.delayed;
         }
         setTimeout(()=>{
-            bigtext(this.refs.span,{...this.props.options});
+            if(this.props.children.length !== 0)
+                bigtext(this.refs.span,{...this.props.options});
         },delay);
     }
 
