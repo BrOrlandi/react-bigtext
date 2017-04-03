@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
 
     this.state= {
-      children:'<i class="fa fa-first-order"></i> Big Text Component <i class="fa fa-first-order"></i>',
+      children:'<i class="fa fa-rebel"></i> Big Text Component <i class="fa fa-empire"></i>',
       options: `{
   "height" : 100
 }`
