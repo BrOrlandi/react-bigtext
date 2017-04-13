@@ -46,7 +46,7 @@ class BigText extends Component {
 
             let divRect = div.getBoundingClientRect();
             let spanRect = span.getBoundingClientRect();
-            while(divRect.width < spanRect.width || divRect.height < spanRect.height){
+            while((divRect.width < spanRect.width || divRect.height < spanRect.height) && parseInt(this.refs.span.style.fontSize) > 0){
                 divRect = div.getBoundingClientRect();
                 spanRect = span.getBoundingClientRect();
                 this.refs.span.style.fontSize = parseInt(this.refs.span.style.fontSize)*0.99+'px';
