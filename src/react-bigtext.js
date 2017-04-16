@@ -33,10 +33,11 @@ class BigText extends Component {
     _update(mount){
         // delay to wait for async loads that change contents
         let delay = 0;
-        if(this.props.delayed === true){
+        let opts = this.props.options;
+        if(opts.delay === true){
             delay = 500;
-        }else if(typeof this.props.delayed === 'number'){
-            delay = this.props.delayed;
+        }else if(typeof opts.delay === 'number'){
+            delay = opts.delay;
         }
 
         // optimization if size of span exceeds the div, reduce the font until it fits better
@@ -71,7 +72,6 @@ class BigText extends Component {
 
         let cleanProps = Object.assign({},this.props);
         delete cleanProps.options;
-        delete cleanProps.delayed;
 
         return (
             <div {...cleanProps} ref="div" style={style}>
@@ -84,11 +84,7 @@ class BigText extends Component {
 }
 
 BigText.propTypes = {
-    options: PropTypes.object,
-    delayed: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.bool
-    ])
+    options: PropTypes.object
 };
 
 export default BigText;

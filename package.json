@@ -24,6 +24,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build-component": "babel src/react-bigtext.js -o dist/react-bigtext.js",
+    "prepublish": "npm run build-component",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
