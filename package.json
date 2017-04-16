@@ -1,6 +1,6 @@
 {
   "name": "react-bigtext",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A ReactJS component of big-text.js lib. This makes text as big as possible while still fitting on the component.",
   "main": "dist/react-bigtext.js",
   "dependencies": {
