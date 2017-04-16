@@ -12,7 +12,16 @@ class App extends Component {
     this.state= {
       children:'<i class="fa fa-rebel"></i> Big Text Component <i class="fa fa-empire"></i>',
       options: `{
-  "height" : 100
+  "height" : 300,
+  "width": 800,
+  "fontSizeFactor": 0.8,
+  "//maximumFontSize": 50,
+  "rotateText": 10,
+  "limitingDimension": "both",
+  "horizontalAlign": "center",
+  "verticalAlign": "center",
+  "textAlign":"center",
+  "whiteSpace": "nowrap"
 }`
     }
   }
@@ -41,11 +50,11 @@ class App extends Component {
           <div className="App-inner">
             <label htmlFor="content">Children Content:</label>
             <br/>
-            <textarea name="content" id="content" ref="content" cols="30" rows="10" value={this.state.children} onChange={this.handleChangeChildren}></textarea>
+            <textarea name="content" id="content" ref="content" cols="50" rows="10" value={this.state.children} onChange={this.handleChangeChildren}></textarea>
             <br/>
             <label htmlFor="options">BigText options:</label>
             <br/>
-            <textarea name="options" id="options" ref="options" cols="30" rows="10" value={this.state.options} onChange={this.handleChangeOptions}>
+            <textarea name="options" id="options" ref="options" cols="50" rows="15" value={this.state.options} onChange={this.handleChangeOptions}>
             </textarea>
             <br/>
             <br/>
@@ -54,6 +63,9 @@ class App extends Component {
             </BigText>
           </div>
         </div>
+        <hr/>
+        <h2>More options in JavaScript original lib</h2>
+        <a href="https://brorlandi.github.io/big-text.js/" target="_blank">https://brorlandi.github.io/big-text.js/</a>
       </div>
     );
   }

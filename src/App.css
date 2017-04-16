@@ -24,3 +24,7 @@
   height: 100px;
   background: #a2c5ba
 }
+
+hr{
+  max-width: 80%;
+}
