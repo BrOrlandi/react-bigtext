@@ -49,6 +49,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <BigText options={{height: 50}}>BigText React Component</BigText>
+          <a href="https://github.com/BrOrlandi/react-bigtext" className="github"><i className="fa fa-github" style={{fontSize: '50px', float: 'right', marginTop: '-50px'}}></i></a>
         </div>
         <div className="App-content">
           <div className="App-inner">
