@@ -6,8 +6,7 @@
   "dependencies": {
     "big-text.js": "^1.0.1",
     "lodash.isequal": "^4.5.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "prop-types": "^15.6.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
