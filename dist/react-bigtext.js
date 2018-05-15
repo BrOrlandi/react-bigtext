@@ -12,9 +12,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _ = require('');
+var _propTypes = require('prop-types');
 
-var _2 = _interopRequireDefault(_);
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _reactDom = require('react-dom');
 
@@ -138,7 +138,7 @@ var BigText = function (_Component) {
 }(_react.Component);
 
 BigText.propTypes = {
-    options: _2.default.object
+    options: _propTypes2.default.object
 };
 
 exports.default = BigText;
