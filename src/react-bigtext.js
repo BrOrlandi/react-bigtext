@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom';
 import bigtext from 'big-text.js';
 import _isEqual from 'lodash.isequal';
@@ -25,7 +26,7 @@ class BigText extends Component {
     }
     
     _preUpdate(){
-        if(this.props.children.length == 0){
+        if(this.props.children.length === 0){
             this.refs.span.style.visibility = "hidden";
         }
     }
@@ -47,10 +48,10 @@ class BigText extends Component {
 
             let divRect = div.getBoundingClientRect();
             let spanRect = span.getBoundingClientRect();
-            while((divRect.width < spanRect.width || divRect.height < spanRect.height) && parseInt(this.refs.span.style.fontSize) > 0){
+            while((divRect.width < spanRect.width || divRect.height < spanRect.height) && parseInt(this.refs.span.style.fontSize, 10) > 0){
                 divRect = div.getBoundingClientRect();
                 spanRect = span.getBoundingClientRect();
-                this.refs.span.style.fontSize = parseInt(this.refs.span.style.fontSize)*0.99+'px';
+                this.refs.span.style.fontSize = parseInt(this.refs.span.style.fontSize, 10)*0.99+'px';
             };
         }
 
